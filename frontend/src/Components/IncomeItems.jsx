@@ -5,7 +5,6 @@ import {bitcoin, book, calender, card, circle, clothing, comment, dollar, food, 
 import Button from './Button';
 
 
-
 function IncomeItem({
     id,
     title,
@@ -14,13 +13,12 @@ function IncomeItem({
     category,
     description,
     deleteItem,
-    indicatorColor,
     type
 }) {
 
-    const categoryIcon = () =>{
+    const categoryIcon = () =>{   
         switch(category) {
-            case 'salary':
+            case 'salary': 
                 return money;
             case 'freelancing':
                 return freelance
@@ -64,15 +62,14 @@ function IncomeItem({
         }
     }
 
-
     return (
-        <IncomeItemStyled   indicator={indicatorColor}>
+        <IncomeItemStyled >
             <div className="icon">
-                
-               {type === 'expense' ? expenseCatIcon() : categoryIcon() }
+                 
+               {type === 'income'?   categoryIcon() : expenseCatIcon() } 
             </div>
             <div className="content">
-                <h5>{title}</h5>
+                <h5>{title}</h5> 
                 <div className="inner-content">
                     <div className="text">
                         <p>{dollar} {amount}</p>
@@ -81,7 +78,7 @@ function IncomeItem({
                             {comment}
                             {description}
                         </p>
-                    </div>
+                    </div> 
                     <div className="btn-con">
                         <Button 
                             icon={trash}
@@ -145,7 +142,7 @@ color: #222260;
             width: .8rem;
             height: .8rem;
             border-radius: 50%;
-            background: ${props => props.indicator};
+           
         }
     }
 
@@ -169,8 +166,5 @@ color: #222260;
     }
 `;
     
-
-    
-
 
 export default IncomeItem;

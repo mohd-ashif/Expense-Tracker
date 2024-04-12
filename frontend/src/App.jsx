@@ -66,6 +66,7 @@ const AppStyled = styled.div`
   height: 100vh;
   background-image: url(${props => props.bg});
   position: relative;
+  cursor: pointer; 
   main{
     flex: 1;
     background: rgba(252, 246, 249, 0.78);
@@ -75,6 +76,7 @@ const AppStyled = styled.div`
     overflow-x: hidden;
     &::-webkit-scrollbar{
       width: 0;
+      
     }
   }
 `;

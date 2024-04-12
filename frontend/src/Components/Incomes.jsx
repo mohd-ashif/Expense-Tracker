@@ -7,10 +7,10 @@ import IncomeItem from './IncomeItems.jsx';
 
 const Income = () => {
 
-  const { addIncome, incomes , getIncomes , deleteIncome, totalIncome} = useGlobalContext()
+  const { addIncome, incomes  , deleteIncome, totalIncome} = useGlobalContext()
 
   useEffect(() => {
-    getIncomes
+    
   
   },[incomes] )
   
@@ -26,7 +26,7 @@ const Income = () => {
           <br />
             <div className="inomes">
               {incomes.map((incomes)=> {
-                const {_id, title , amount,date, category , description , totalIncome} = incomes
+                const {_id, title , amount,date, category ,type, description , totalIncome} = incomes
                      return <IncomeItem 
                      
                      key={_id}  
@@ -35,9 +35,10 @@ const Income = () => {
                      description={description} 
                      amount={amount} 
                      date={date} 
+                     type={type} 
                      category={category}
                      deleteItem={deleteIncome} 
-                    
+                     
                      />
               })}
 
