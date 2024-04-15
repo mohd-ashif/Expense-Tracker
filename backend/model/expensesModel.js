@@ -7,11 +7,11 @@ const ExpenseSchema = new mongoose.Schema({
 
     type: { type: String, default:"expense"},
 
-    date: {type:Number, require: true ,trim : true},
+    date: {type: Date, required: true},
 
-    category : { type: String, require: true, maxLength: 20, trim:true},
+    category : { type: String, require: true, maxLength: 30, trim:true},
 
-    description : {type: String, require : true , maxLength: 20, trim : true}
+    description : {type: String, require : true , maxLength: 30, trim : true}
 
 }, {timestamps: true})
 
