@@ -8,6 +8,7 @@ import Dashboard from "./Components/Dashboard";
 import Income from "./Components/Incomes";
 import Expenses from "./Components/Expenses";
 import { useGlobalContext } from "./Context/globalContext";
+import History from "./Components/Transaction";
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
           return <Dashboard />
 
           case 2 :
-          return <Dashboard />
+          return <History />
 
           case 3: 
           return <Income />
@@ -53,7 +54,6 @@ function App() {
          {displayData()}
          </main>
         </MainLayout>
-
        </AppStyled>
 
        
@@ -66,7 +66,6 @@ const AppStyled = styled.div`
   height: 100vh;
   background-image: url(${props => props.bg});
   position: relative;
-  cursor: pointer; 
   main{
     flex: 1;
     background: rgba(252, 246, 249, 0.78);
@@ -76,7 +75,6 @@ const AppStyled = styled.div`
     overflow-x: hidden;
     &::-webkit-scrollbar{
       width: 0;
-      
     }
   }
 `;

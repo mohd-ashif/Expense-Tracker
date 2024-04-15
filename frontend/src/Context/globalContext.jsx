@@ -111,8 +111,25 @@ export const GlobalProvider = ({ children }) => {
     // Calculate total expenses
     const totalExpense = calculateTotalExpenses(expenses);
 
+
+    //Calculate Balance 
+    const totalBalance = ()=> {
+        return totalIncome - totalExpense
+
+    }
+    const transactionHistory = () => {
+        const history = [...incomes, ...expenses];
+        history.sort((a, b) => {
+            return new Date(b.createdAt) - new Date(a.createdAt);
+        });
+        return history; 
+    };
+    
+    
+  
+    
     return (
-        <GlobalContext.Provider value={{ addIncome, incomes, deleteIncome, totalIncome , expenses , addExpense ,  deleteExpense , totalExpense }}>
+        <GlobalContext.Provider value={{ addIncome, incomes, deleteIncome, totalIncome , expenses , addExpense ,  deleteExpense , totalExpense , totalBalance , transactionHistory}}>
             {children}
         </GlobalContext.Provider>
     );
