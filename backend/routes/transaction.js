@@ -4,7 +4,7 @@ const { addExpense, getExpense, deleteExpense } = require('../controllers/expenc
 
 const router = express.Router();
 
-router.post('/add-income', addIncome)
+router.post('/add-income', addIncome) 
   .get('/get-incomes', getIncome) 
   .delete('/delete-income/:id', deleteIncome)
   .post('/add-expense', addExpense)

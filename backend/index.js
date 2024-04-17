@@ -13,7 +13,6 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cors());
 
-
 readdirSync('./routes').map((route) => app.use('/api/v1', require('./routes/' + route)))
 
 // Default route
