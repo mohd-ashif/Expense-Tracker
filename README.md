@@ -1,4 +1,4 @@
-# E-Commerce MERN App
+
 
 Welcome to the E-Commerce MERN (MongoDB, Express.js, React, Node.js) App README. This document provides an overview of the project, its features, setup instructions, and other relevant details.
 
